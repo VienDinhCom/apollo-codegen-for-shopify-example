@@ -9,7 +9,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "apollo": "^2.12.5",
     "apollo-boost": "^0.4.0"
+  },
+  "devDependencies": {
+    "apollo": "^2.12.5"
   }
 }
