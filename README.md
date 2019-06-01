@@ -1,6 +1,6 @@
 # Apollo Codegen for Shopify Example
 
-Run `npm run codegen` to generate typescript types.
+Run `npm run codegen` to generate TypeScript types.
 
 This is the `apollo.config.js` for Shopify working with Apollo CLI and Apollo VSCode extension.
 
