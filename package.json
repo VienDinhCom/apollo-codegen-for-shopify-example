@@ -1,0 +1,15 @@
+{
+  "name": "apollo-codegen-for-shopify-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "codegen": "apollo codegen:generate  --target typescript --outputFlat src/types"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo": "^2.12.5",
+    "apollo-boost": "^0.4.0"
+  }
+}
