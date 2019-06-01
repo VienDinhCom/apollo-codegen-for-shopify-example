@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "codegen": "apollo codegen:generate  --target typescript --outputFlat src/types"
+    "codegen": "apollo codegen:generate --addTypename --target typescript --outputFlat src/types"
   },
   "keywords": [],
   "author": "",
