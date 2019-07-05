@@ -1,7 +1,7 @@
 import { gql } from 'apollo-boost'
 
-const productConnectionFields = gql`
-  fragment ProductConnectionFields on ProductConnection {
+const PRODUCT_FRAGMENT = gql`
+  fragment Products on ProductConnection {
     edges {
       node {
         title
@@ -27,11 +27,11 @@ const productConnectionFields = gql`
   }
 `;
 
-export const productsQuery = gql`
-  ${productConnectionFields}
-  query ProductsData($query: String!, $sortKey: ProductSortKeys, $reverse: Boolean) {
+export const PRODUCTS_QUERY = gql`
+  ${PRODUCT_FRAGMENT}
+  query Products($query: String!, $sortKey: ProductSortKeys, $reverse: Boolean) {
     products(first: 5, query: $query, sortKey: $sortKey, reverse: $reverse) {
-      ...ProductConnectionFields
+      ...Products
     }
   }
 `;

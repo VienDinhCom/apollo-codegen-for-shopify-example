@@ -5,10 +5,10 @@
 import { CurrencyCode } from "./globalTypes";
 
 // ====================================================
-// GraphQL fragment: ProductConnectionFields
+// GraphQL fragment: Products
 // ====================================================
 
-export interface ProductConnectionFields_edges_node_priceRange_minVariantPrice {
+export interface Products_edges_node_priceRange_minVariantPrice {
   __typename: "MoneyV2";
   /**
    * Decimal money amount.
@@ -20,7 +20,7 @@ export interface ProductConnectionFields_edges_node_priceRange_minVariantPrice {
   currencyCode: CurrencyCode;
 }
 
-export interface ProductConnectionFields_edges_node_priceRange_maxVariantPrice {
+export interface Products_edges_node_priceRange_maxVariantPrice {
   __typename: "MoneyV2";
   /**
    * Decimal money amount.
@@ -32,19 +32,19 @@ export interface ProductConnectionFields_edges_node_priceRange_maxVariantPrice {
   currencyCode: CurrencyCode;
 }
 
-export interface ProductConnectionFields_edges_node_priceRange {
+export interface Products_edges_node_priceRange {
   __typename: "ProductPriceRange";
   /**
    * The lowest variant's price.
    */
-  minVariantPrice: ProductConnectionFields_edges_node_priceRange_minVariantPrice;
+  minVariantPrice: Products_edges_node_priceRange_minVariantPrice;
   /**
    * The highest variant's price.
    */
-  maxVariantPrice: ProductConnectionFields_edges_node_priceRange_maxVariantPrice;
+  maxVariantPrice: Products_edges_node_priceRange_maxVariantPrice;
 }
 
-export interface ProductConnectionFields_edges_node {
+export interface Products_edges_node {
   __typename: "Product";
   /**
    * The product’s title.
@@ -66,22 +66,22 @@ export interface ProductConnectionFields_edges_node {
   /**
    * The price range.
    */
-  priceRange: ProductConnectionFields_edges_node_priceRange;
+  priceRange: Products_edges_node_priceRange;
 }
 
-export interface ProductConnectionFields_edges {
+export interface Products_edges {
   __typename: "ProductEdge";
   /**
    * The item at the end of ProductEdge.
    */
-  node: ProductConnectionFields_edges_node;
+  node: Products_edges_node;
   /**
    * A cursor for use in pagination.
    */
   cursor: string;
 }
 
-export interface ProductConnectionFields_pageInfo {
+export interface Products_pageInfo {
   __typename: "PageInfo";
   /**
    * Indicates if there are more pages to fetch.
@@ -89,14 +89,14 @@ export interface ProductConnectionFields_pageInfo {
   hasNextPage: boolean;
 }
 
-export interface ProductConnectionFields {
+export interface Products {
   __typename: "ProductConnection";
   /**
    * A list of edges.
    */
-  edges: ProductConnectionFields_edges[];
+  edges: Products_edges[];
   /**
    * Information to aid in pagination.
    */
-  pageInfo: ProductConnectionFields_pageInfo;
+  pageInfo: Products_pageInfo;
 }
